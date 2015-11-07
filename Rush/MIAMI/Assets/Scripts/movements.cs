@@ -16,8 +16,7 @@ public class movements : MonoBehaviour {
 		float vert = Input.GetAxis("Vertical");
 		if (hori != 0 || vert != 0) {
 			anim.SetBool("is_walking", true);
-			rb.velocity = new Vector2(vert * maxSpeed, rb.velocity.y);
-			rb.velocity = new Vector2(hori * maxSpeed, rb.velocity.x);
+			rb.velocity = new Vector2(hori * maxSpeed, vert * maxSpeed);
 		} else {
 			anim.SetBool("is_walking", false);
 		}
