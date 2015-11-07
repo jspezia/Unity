@@ -2,25 +2,23 @@
 using System.Collections;
 
 public class movements : MonoBehaviour {
-	
-	public	GameObject	legs;
 
 	public float		maxSpeed = 5f;
 	private Rigidbody2D rb;
-	private Animator anim;
+	private Animator 	anim;
 
 	void Start() {
 		rb = (Rigidbody2D)GetComponent<Rigidbody2D>();
-		anim = legs.GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 	}
 
 	void Update() {
 		float hori = Input.GetAxis("Horizontal");
 		float vert = Input.GetAxis("Vertical");
 		if (hori != 0 || vert != 0) {
-			anim.SetBool("walking", true);
+			anim.SetBool("is_walking", true);
 		} else {
-			anim.SetBool("walking", false);
+			anim.SetBool("is_walking", false);
 		}
 		
 		rb.velocity = new Vector2(hori * maxSpeed, vert * maxSpeed);
