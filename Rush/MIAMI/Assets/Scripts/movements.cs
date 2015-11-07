@@ -3,7 +3,7 @@ using System.Collections;
 
 public class movements : MonoBehaviour {
 
-	public float	maxSpeed = 5f;
+	public float		maxSpeed = 5f;
 	private Rigidbody2D rb;
 
 
