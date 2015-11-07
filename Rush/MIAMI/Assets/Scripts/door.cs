@@ -14,13 +14,13 @@ public class door : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Player"/* || other.tag == "Player"*/) {
+		if (other.tag == "Player" || other.tag == "Ennemy") {
 			doorImg.transform.position = new Vector2(transform.position.x + (dirMoveX * 2), transform.position.y + (dirMoveY * 2));
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.tag == "Player"/* || other.tag == "Player"*/) {
+		if (other.tag == "Player" || other.tag == "Ennemy") {
 			doorImg.transform.position = _positionStart;
 		}
 	}
