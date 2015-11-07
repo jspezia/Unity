@@ -17,7 +17,7 @@ public class Ennemy : MonoBehaviour {
 		_speed = 5f;
 		_anim = legs.GetComponent<Animator> ();
 	}
-
+	
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player") {
 			_attackingPlayer = true;
