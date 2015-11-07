@@ -22,11 +22,10 @@ public class Ennemy : MonoBehaviour {
 		if (other.tag == "Player") {
 			_attackingPlayer = true;
 			_anim.SetBool("walking", true);
-		}
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if (_attackingPlayer == true) {
 			
 			_newPosition = player.transform.position;
