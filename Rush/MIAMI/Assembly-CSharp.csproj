@@ -54,10 +54,7 @@
      <Compile Include="Assets\Scripts\generateCharacter.cs" />
      <Compile Include="Assets\Scripts\menuScript.cs" />
      <Compile Include="Assets\Scripts\movements.cs" />
-<<<<<<< HEAD
-=======
      <Compile Include="Assets\Scripts\player.cs" />
->>>>>>> ac4556367f6917795a962e9e6812a1579d07028c
      <Compile Include="Assets\Scripts\weapon.cs" />
      <None Include="Assets\Fonts\friday13\Font License.txt" />
      <None Include="Assets\Fonts\d3digitalism\Read Me.txt" />
