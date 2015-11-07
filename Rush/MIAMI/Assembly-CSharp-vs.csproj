@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\camera_position.cs" />
      <Compile Include="Assets\Scripts\door.cs" />
+     <Compile Include="Assets\Scripts\menuScript.cs" />
      <Compile Include="Assets\Scripts\movements.cs" />
      <None Include="Assets\Fonts\friday13\Font License.txt" />
      <None Include="Assets\Fonts\d3digitalism\Read Me.txt" />
