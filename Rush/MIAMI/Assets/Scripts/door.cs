@@ -14,19 +14,19 @@ public class door : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
-		if (other.tag == "Player" || (other.tag == "Ennemy" && !other.isTrigger)) {
+		if ((other.tag == "Player" || other.tag == "Ennemy") && !other.isTrigger) {
 			doorImg.transform.position = new Vector2(transform.position.x + (dirMoveX * 2), transform.position.y + (dirMoveY * 2));
 		}
 	}
 	
-	void OnTriggerStay2D(Collider2D other) {
-		if (other.tag == "Player" || (other.tag == "Ennemy" && !other.isTrigger)) {
-			doorImg.transform.position = new Vector2(transform.position.x + (dirMoveX * 2), transform.position.y + (dirMoveY * 2));
-		}
-	}
+	// void OnTriggerStay2D(Collider2D other) {
+	// 	if (other.tag == "Player" || (other.tag == "Ennemy" && !other.isTrigger)) {
+	// 		doorImg.transform.position = new Vector2(transform.position.x + (dirMoveX * 2), transform.position.y + (dirMoveY * 2));
+	// 	}
+	// }
 
 	void OnTriggerExit2D(Collider2D other) {
-		if (other.tag == "Player" || (other.tag == "Ennemy" && !other.isTrigger)) {
+		if ((other.tag == "Player" || other.tag == "Ennemy") && !other.isTrigger) {
 			doorImg.transform.position = _positionStart;
 		}
 	}
