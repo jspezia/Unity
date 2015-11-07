@@ -6,10 +6,11 @@ public class bullet : MonoBehaviour {
 	private Vector3		target;
 	private Vector3		direction;
 	public float		speed = 30f;
-	bool				fired;
+	private bool		fired;
 
-	void Start () {
-		fired = false;
+	void Awake () {
+		Debug.Log("Start");
+		fired = true;
 	}
 	
 	void Update () {
@@ -22,11 +23,13 @@ public class bullet : MonoBehaviour {
 	}
 
 public	void Fire (Vector3 _position, Vector3 _target) {
-		fired = true;
-		_target.z = 0f;
-		target = _target;
-		_position.z = 0f;
-		transform.position = _position;
-		direction =  target - transform.position;
+
+	Debug.Log("Fire a bullet.");
+	fired = true;
+	_target.z = 0f;
+	target = _target;
+	_position.z = 0f;
+	transform.position = _position;
+	direction =  target - transform.position;
 	}
 }
