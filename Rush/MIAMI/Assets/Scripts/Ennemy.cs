@@ -21,7 +21,8 @@ public class Ennemy : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player") {
 			_attackingPlayer = true;
-			_anim.SetBool("walking", true);
+			_anim.SetBool ("walking", true);
+		}
 	}
 	
 	// Update is called once per frame
