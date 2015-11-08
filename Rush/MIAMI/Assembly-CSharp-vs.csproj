@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ennemy.cs" />
+     <Compile Include="Assets\Scripts\Title.cs" />
+     <Compile Include="Assets\Scripts\bg_animation.cs" />
+     <Compile Include="Assets\Scripts\bg_motif.cs" />
      <Compile Include="Assets\Scripts\bullet.cs" />
      <Compile Include="Assets\Scripts\camera_position.cs" />
      <Compile Include="Assets\Scripts\cursor.cs" />
