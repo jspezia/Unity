@@ -46,7 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\AutoSnap.cs" />
+     <Compile Include="Assets\Fonts\Editor\AutoSnap.cs" />
      <None Include="Assets\Fonts\friday13\Font License.txt" />
      <None Include="Assets\Fonts\d3digitalism\Read Me.txt" />
      <None Include="Assets\Fonts\shoguns_clan\README.txt" />
