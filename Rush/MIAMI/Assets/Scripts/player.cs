@@ -5,15 +5,6 @@ public class player : MonoBehaviour {
 	
 	public GameObject	attachToBody;
 	public GameObject	weapon;
-
-<<<<<<< HEAD
-	void OnCollisionEnter2D(Collision2D coll) {
-		if (coll.gameObject.tag == "bullet_ennemy" || coll.gameObject.tag == "Ennemy") {
-			Debug.Log("Dead Player");
-			Application.LoadLevel(Application.loadedLevel);
-		}
-	}
-=======
 	private weapon	weapon2;
 	private GameObject	bullet_prefab;
 	private Collider2D	_colSelected;
@@ -21,7 +12,13 @@ public class player : MonoBehaviour {
 	private weapons			_weapon;
 	
 	private Animator 	anim;
->>>>>>> weapons
+	
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.tag == "bullet_ennemy" || coll.gameObject.tag == "Ennemy") {
+			Debug.Log("Dead Player");
+			Application.LoadLevel(Application.loadedLevel);
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
