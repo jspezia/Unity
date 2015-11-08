@@ -4,7 +4,6 @@ using System.Collections;
 public class Ennemy : MonoBehaviour {
 	
 	public GameObject	player;
-	public	GameObject	legs;
 
 	private bool		_attackingPlayer;
 	private Vector3		_newPosition;
@@ -15,13 +14,13 @@ public class Ennemy : MonoBehaviour {
 	void Start () {
 		_attackingPlayer = false;
 		_speed = 5f;
-		_anim = legs.GetComponent<Animator> ();
+		_anim = GetComponent<Animator> ();
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.tag == "Player") {
 			_attackingPlayer = true;
-			_anim.SetBool ("walking", true);
+			_anim.SetBool ("is_walking", true);
 		}
 	}
 	
