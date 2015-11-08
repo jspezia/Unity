@@ -7,7 +7,7 @@ public class Ennemy : MonoBehaviour {
 	public GameObject	bullet_prefab;
 	public float		cadence = 1f;
 
-	private bool		_attackingPlayer;
+	public	bool		_attackingPlayer;
 	private Vector3		_newPosition;
 	private float		_speed;
 	private Animator	_anim;
