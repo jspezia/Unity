@@ -8,7 +8,7 @@ public class player : MonoBehaviour {
 	private weapon	weapon2;
 	private GameObject	bullet_prefab;
 	private Collider2D	_colSelected;
-	private generateWeapon	_weaponSelected = null;
+	public generateWeapon	_weaponSelected = null;
 	private weapons			_weapon;
 	
 	private Animator 	anim;

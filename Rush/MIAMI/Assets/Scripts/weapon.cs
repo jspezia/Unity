@@ -28,7 +28,7 @@ public class weapon : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0)) {
 			fire = false;
 		}
-		if (fire) {
+		if (player.GetComponent<player>()._weaponSelected != null && fire) {
 			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0));
 			if (Time.time - t0 > cadence) {
 				depart = transform.position;
