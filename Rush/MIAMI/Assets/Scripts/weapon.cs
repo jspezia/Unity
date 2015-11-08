@@ -5,11 +5,17 @@ public class weapon : MonoBehaviour {
 
 	public GameObject		bullet_prefab;
 	public GameObject		player;
-	private GameObject		bullet;
 	public float			cadence = 2.5f;
+	public string			type;
+	public Sprite[]			bullets;
+
+	private GameObject		bullet;
 	private float			t0;
 	private bool			fire = false;
 	private Vector3			depart;
+
+	Vector3 dir;
+	float 	angle;
 
 	void Start () {
 		t0 = Time.time;
@@ -27,6 +33,11 @@ public class weapon : MonoBehaviour {
 			if (Time.time - t0 > cadence) {
 				depart = transform.position;
 				bullet = (GameObject)GameObject.Instantiate(bullet_prefab, depart, Quaternion.identity);
+
+				dir = transform.position - mousePosition;
+				angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+				bullet.transform.rotation = Quaternion.AngleAxis(angle - 180, Vector3.forward);
+
 				bullet.GetComponent<bullet>().Fire(mousePosition);
 				t0 = Time.time;
 			}
