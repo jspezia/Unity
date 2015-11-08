@@ -46,9 +46,9 @@ public class Ennemy : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, _newPosition, _speed * Time.deltaTime);
 
 			if (Time.time - t0 > cadence) {
-			bullet = (GameObject)GameObject.Instantiate(bullet_prefab, transform.position, Quaternion.identity);
-			bullet.GetComponent<bullet>().Fire(player.transform.position);
-			t0 = Time.time;
+				bullet = (GameObject)GameObject.Instantiate(bullet_prefab, transform.position, Quaternion.identity);
+				bullet.GetComponent<bullet>().Fire(player.transform.position);
+				t0 = Time.time;
 			}
 		}
 	}
