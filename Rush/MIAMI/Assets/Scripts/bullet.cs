@@ -11,7 +11,7 @@ public class bullet : MonoBehaviour {
 	void Awake ()
 	{
 		// transform.position = new Vector3(transform.position.x + transform.rotation.w, transform.position.y + transform.rotation.z, 0f);
-		Debug.Log("Ma position : ( " + transform.position.x + " / " + transform.position.y);
+		// Debug.Log("Ma position : ( " + transform.position.x + " / " + transform.position.y);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {

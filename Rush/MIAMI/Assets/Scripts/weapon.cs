@@ -25,7 +25,6 @@ public class weapon : MonoBehaviour {
 		if (fire) {
 			Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0));
 			if (Time.time - t0 > cadence) {
-				Debug.Log("Rotation joueur " + player.transform.rotation.z + " / " + player.transform.rotation.w);
 				depart = transform.position;
 				bullet = (GameObject)GameObject.Instantiate(bullet_prefab, depart, Quaternion.identity);
 				bullet.GetComponent<bullet>().Fire(mousePosition);
