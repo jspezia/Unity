@@ -5,7 +5,7 @@ public class Ennemy : MonoBehaviour {
 	
 	public GameObject	player;
 	public GameObject	bullet_prefab;
-	public float		cadence = 0.5f;
+	public float		cadence = 1f;
 
 	private bool		_attackingPlayer;
 	private Vector3		_newPosition;
@@ -19,7 +19,7 @@ public class Ennemy : MonoBehaviour {
 		_attackingPlayer = false;
 		_speed = 5f;
 		_anim = GetComponent<Animator> ();
-		t0 = Time.time;
+		t0 = 0f;
 	}
 	
 	void OnTriggerEnter2D(Collider2D other) {
@@ -38,6 +38,9 @@ public class Ennemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (_attackingPlayer == true) {
+			if (t0 == 0f) {
+				t0 = Time.time;
+			}
 			_newPosition = player.transform.position;
 			var dir = _newPosition - transform.position;
 			var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
