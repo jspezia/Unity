@@ -6,6 +6,8 @@ public class Boss : MonoBehaviour {
 	public GameObject	player;
 	public GameObject	bullet_prefab;
 	public float		cadence = 1f;
+	public AudioClip	death;
+	
 
 	public	bool		_attackingPlayer;
 	private Vector3		_newPosition;
@@ -34,6 +36,7 @@ public class Boss : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "bullet_player") {
+			AudioSource.PlayClipAtPoint(death, Vector3.up);
 			Debug.Log("Aaaarghh !");
 			Application.LoadLevel(4);
 		}

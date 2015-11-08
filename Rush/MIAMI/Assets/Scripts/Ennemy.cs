@@ -6,6 +6,7 @@ public class Ennemy : MonoBehaviour {
 	public GameObject	player;
 	public GameObject	bullet_prefab;
 	public float		cadence = 1f;
+	public AudioClip	death;
 
 	public	bool		_attackingPlayer;
 	private Vector3		_newPosition;
@@ -35,6 +36,7 @@ public class Ennemy : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "bullet_player") {
 			Debug.Log("Aaaarghh !");
+			AudioSource.PlayClipAtPoint(death, Vector3.up);
 			Destroy(gameObject);
 		}
 	}

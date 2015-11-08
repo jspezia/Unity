@@ -3,19 +3,24 @@ using System.Collections;
 
 public class player : MonoBehaviour {
 	
-	public GameObject	attachToBody;
-	public GameObject	weapon;
-	private weapon	weapon2;
-	private GameObject	bullet_prefab;
-	private Collider2D	_colSelected;
+	public GameObject		attachToBody;
+	public GameObject		weapon;
+	private weapon			weapon2;
+	private GameObject		bullet_prefab;
+	private Collider2D		_colSelected;
 	public generateWeapon	_weaponSelected = null;
 	private weapons			_weapon;
+	public AudioClip		death;
+	public AudioClip		reload;
+	public AudioClip		fire;
+
 	
 	private Animator 	anim;
 	
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "bullet_ennemy" || coll.gameObject.tag == "Ennemy") {
 			Debug.Log("Dead Player");
+			AudioSource.PlayClipAtPoint(death, Vector3.up);
 			Application.LoadLevel(Application.loadedLevel);
 		}
 	}
@@ -26,11 +31,13 @@ public class player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (Input.GetMouseButtonDown(0) && _weaponSelected != null) {
+			AudioSource.PlayClipAtPoint(fire, Vector3.up);
+		}
 		if (Input.GetKeyDown(KeyCode.E) && _weaponSelected == null) {
 			_colSelected = Physics2D.OverlapPoint(transform.position);
 			if (_colSelected && _colSelected.tag == "weapon") {
-
+				AudioSource.PlayClipAtPoint(reload, Vector3.up);
 				_weaponSelected = _colSelected.gameObject.GetComponent<generateWeapon>();
 				anim = _weaponSelected.GetComponent<Animator>();
 				_weapon = _weaponSelected.weapon.GetComponent<weapons>();

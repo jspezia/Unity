@@ -8,6 +8,7 @@ public class weapon : MonoBehaviour {
 	public float			cadence = 2.5f;
 	public Sprite[]			bullets;
 
+
 	private GameObject		bullet;
 	private float			t0;
 	private bool			fire = false;
