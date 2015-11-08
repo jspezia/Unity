@@ -11,11 +11,14 @@ public class Checkpoint : MonoBehaviour {
 	private Vector3			check1;
 	private Vector3			check2;
 	private Vector3			_newPosition;
+	private Animator	_anim;
 	// Use this for initialization
 	void Start () {
 		check1 = ch1.transform.position;
 		check2 = ch2.transform.position;
 		_newPosition = check1;
+		_anim = GetComponent<Animator> ();
+		_anim.SetBool ("is_walking", true);
 	}
 	
 	// Update is called once per frame
