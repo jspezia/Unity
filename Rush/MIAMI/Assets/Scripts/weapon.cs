@@ -6,7 +6,6 @@ public class weapon : MonoBehaviour {
 	public GameObject		bullet_prefab;
 	public GameObject		player;
 	public float			cadence = 2.5f;
-	public string			type;
 	public Sprite[]			bullets;
 
 	private GameObject		bullet;
