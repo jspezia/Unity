@@ -17,9 +17,4 @@ public class generateCharacter : MonoBehaviour {
 		sRenderer = body.GetComponent<SpriteRenderer> ();
 		sRenderer.sprite = bodies[Random.Range (0, 3)];
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

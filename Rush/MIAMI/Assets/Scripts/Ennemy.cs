@@ -14,6 +14,9 @@ public class Ennemy : MonoBehaviour {
 	private GameObject	bullet;
 	private	float		t0;
 
+	Vector3 dir;
+	float 	angle;
+
 	// Use this for initialization
 	void Start () {
 		_attackingPlayer = false;
@@ -42,8 +45,8 @@ public class Ennemy : MonoBehaviour {
 				t0 = Time.time;
 			}
 			_newPosition = player.transform.position;
-			var dir = _newPosition - transform.position;
-			var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+			dir = _newPosition - transform.position;
+			angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 			transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
 			
 			transform.position = Vector3.MoveTowards(transform.position, _newPosition, _speed * Time.deltaTime);
