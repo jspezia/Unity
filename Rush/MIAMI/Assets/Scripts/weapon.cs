@@ -5,8 +5,10 @@ public class weapon : MonoBehaviour {
 
 	public GameObject		bullet_prefab;
 	public GameObject		player;
-	private GameObject		bullet;
 	public float			cadence = 2.5f;
+	public string			type;
+
+	private GameObject		bullet;
 	private float			t0;
 	private bool			fire = false;
 	private Vector3			depart;

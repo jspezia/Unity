@@ -53,10 +53,12 @@
      <Compile Include="Assets\Scripts\cursor.cs" />
      <Compile Include="Assets\Scripts\door.cs" />
      <Compile Include="Assets\Scripts\generateCharacter.cs" />
+     <Compile Include="Assets\Scripts\generateWeapon.cs" />
      <Compile Include="Assets\Scripts\menuScript.cs" />
      <Compile Include="Assets\Scripts\movements.cs" />
      <Compile Include="Assets\Scripts\player.cs" />
      <Compile Include="Assets\Scripts\weapon.cs" />
+     <Compile Include="Assets\Scripts\weapons.cs" />
      <None Include="Assets\Fonts\friday13\Font License.txt" />
      <None Include="Assets\Fonts\d3digitalism\Read Me.txt" />
      <None Include="Assets\Fonts\shoguns_clan\README.txt" />
