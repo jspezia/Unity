@@ -3,7 +3,7 @@ using System.Collections;
 
 public class menuScript : MonoBehaviour {
 
-	public GameObject PauseUI;
+	//public GameObject PauseUI;
 
 	void Start() {
 	}
@@ -11,9 +11,19 @@ public class menuScript : MonoBehaviour {
 	void Update() {
 	}
 
-	public void Start_Game
-	() {
+	public void Start_Game()
+	{
 		Application.LoadLevel(1);
+	}
+
+	public void	Restart_Level()
+	{
+		Application.LoadLevel (1); //load current level
+	}
+
+	public void MainMenu()
+	{
+		Application.LoadLevel (1); //load Main menu scene
 	}
 
 	public void Exit() {
