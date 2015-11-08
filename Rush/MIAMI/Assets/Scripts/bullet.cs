@@ -15,7 +15,7 @@ public class bullet : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Debug.Log("Collision enter: " + coll.gameObject.tag);
+		// Debug.Log("Collision enter: " + coll.gameObject.tag);
 		Destroy(gameObject);
 	}
 	
