@@ -1,19 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/menuScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/menuScript.cs" Line="18" Column="2" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ennemy.cs">
-    <Files>
-      <File FileName="Assets/Scripts/movements.cs" Line="27" Column="105" />
-      <File FileName="Assets/Scripts/weapon.cs" Line="36" Column="2" />
-      <File FileName="Assets/Scripts/player.cs" Line="23" Column="1" />
-      <File FileName="Assets/Scripts/generateCharacter.cs" Line="26" Column="1" />
-      <File FileName="Assets/Scripts/camera_position.cs" Line="8" Column="24" />
-      <File FileName="Assets/Scripts/Ennemy.cs" Line="59" Column="1" />
->>>>>>> 484cb2a6f554c439d8b1f9b0960167ae6971705e
+      <File FileName="Assets/Scripts/menuScript.cs" Line="10" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
